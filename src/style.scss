@@ -11,6 +11,7 @@ $dark-blue: hsl(240, 100%, 5%);
   margin: 0;
   padding: 0;
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
 }
 
 html {
@@ -28,15 +29,16 @@ html {
   @media screen and (max-width: 1280px) {
     font-size: 12px;
   }
+
+  &:has(#app.mobile) {
+    overflow-x: hidden;
+  }
 }
 
 body {
   height: var(--height);
   background-color: $white;
-
-  &:has(#app.mobile) {
-    overflow: hidden;
-  }
+  overflow: auto;
 }
 
 #mask {
@@ -54,13 +56,11 @@ body {
 }
 
 #app {
-  height: var(--height);
   max-width: 1440px;
   min-width: 1038px;
   padding: 3rem 3rem 0 3rem;
   margin: 0 auto;
   box-sizing: border-box;
-  overflow-y: auto;
 
   nav {
     display: flex;
@@ -155,7 +155,6 @@ body {
       grid-area: new;
       display: flex;
       flex-direction: column;
-      max-height: 43rem;
       padding: 2rem 1.8rem;
       background-color: $dark-blue;
       color: $white;
@@ -245,7 +244,7 @@ body {
   }
 
   footer {
-    margin-top: 10rem;
+    margin: 10rem 0 1rem 0;
     text-align: center;
     color: $gray;
 
@@ -273,8 +272,8 @@ body {
       right: -300px;
       top: 0;
       width: 250px;
-      height: 100vh;
-      padding-top: 22%;
+      height: var(--height);
+      padding-top: 10rem;
       background-color: $white;
       transition: right 0.3s;
 
@@ -287,7 +286,7 @@ body {
 
       li {
         font-size: 2rem;
-        margin-top: 10%;
+        margin-top: 1rem;
       }
 
       &.active {

@@ -14,13 +14,15 @@ window.onload = () => {
     if (menuUl) {
       menuUl.style.display = 'none';
     }
-  }
 
-  document.documentElement.style.setProperty('--height', window.innerHeight + 'px');
+    document.documentElement.style.setProperty('--height', window.innerHeight + 'px');
+  }
 };
 
 window.onresize = () => {
-  document.documentElement.style.setProperty('--height', window.innerHeight + 'px');
+  if (mobile()) {
+    document.documentElement.style.setProperty('--height', window.innerHeight + 'px');
+  }
 };
 
 function openMenu() {
