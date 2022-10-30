@@ -2,12 +2,87 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <title>Frontend Mentor | News homepage</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <nav>
+        <img src="./assets/images/logo.svg" alt="logo" />
+        <ul>
+          <li>Home</li>
+          <li>New</li>
+          <li>Popular</li>
+          <li>Trending</li>
+          <li>Categories</li>
+        </ul>
+      </nav>
+      <main>
+        <section class="main-article">
+          <img src="./assets/images/image-web-3-desktop.jpg" alt="puzzle" />
+          <h1>The Bright Future of Web 3.0?</h1>
+          <p>
+            We dive into the next evolution of the web that claims to put the power of the platforms
+            back into the hands of the people. But is it really fulfilling its promise?
+            <button>Read more</button>
+          </p>
+        </section>
+
+        <section class="new-list">
+          <h2>New</h2>
+          <ul>
+            <li>
+              <h3>Hydrogen VS Electric Cars</h3>
+              <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+            </li>
+            <li>
+              <h3>The Downsides of AI Artistry</h3>
+              <p>What are the possible adverse effects of on-demand AI image generation?</p>
+            </li>
+            <li>
+              <h3>Is VC Funding Drying Up?</h3>
+              <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+            </li>
+          </ul>
+        </section>
+
+        <ul class="list">
+          <li>
+            <img src="./assets/images/image-retro-pcs.jpg" alt="img" />
+            <div class="text">
+              <h2>01</h2>
+              <h3>Reviving Retro PCs</h3>
+              <p>What happens when old PCs are given modern upgrades?</p>
+            </div>
+          </li>
+          <li>
+            <img src="./assets/images/image-top-laptops.jpg" alt="img" />
+            <div class="text">
+              <h2>02</h2>
+              <h3>Top 10 Laptops of 2022</h3>
+              <p>Our best picks for various needs and budgets.</p>
+            </div>
+          </li>
+          <li>
+            <img src="./assets/images/image-gaming-growth.jpg" alt="img" />
+            <div class="text">
+              <h2>03</h2>
+              <h3>The Growth of Gaming</h3>
+              <p>How the pandemic has sparked fresh opportunities.</p>
+            </div>
+          </li>
+        </ul>
+      </main>
+
+      <footer class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
+      </footer>
+    </div>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

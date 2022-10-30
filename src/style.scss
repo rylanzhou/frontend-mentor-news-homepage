@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+$orange: hsl(35, 77%, 62%);
+$red: hsl(5, 85%, 63%);
+$white: hsl(36, 100%, 99%);
+$gray: hsl(233, 8%, 79%);
+$dark-gray: hsl(236, 13%, 42%);
+$dark-blue: hsl(240, 100%, 5%);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: $white;
+}
+
+#app {
+  max-width: 1440px;
+  width: 100%;
+  padding: 3rem 3rem 0 3rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+
+    ul {
+      display: flex;
+      list-style: none;
+      color: $dark-gray;
+
+      li {
+        margin-left: 3rem;
+        cursor: pointer;
+        transition: color 0.2s;
+
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+
+  main {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    margin-top: 3rem;
+    gap: 3rem;
+
+    .main-article {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+      display: grid;
+      grid-template: 1fr 1fr / 1fr 1fr;
+      gap: 2rem;
+
+      img {
+        grid-column: 1 / span 2;
+        width: 100%;
+        height: 100%;
+      }
+
+      h1 {
+        font-size: 5rem;
+        line-height: 5rem;
+        font-weight: 800;
+      }
+
+      p {
+      }
+    }
+
+    .news-list {
+      grid-column: 3;
+    }
+
+    .list {
+      grid-column: 1 / span 3;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      list-style: none;
+
+      li {
+        display: flex;
+        height: 10rem;
+
+        .text {
+          display: grid;
+          grid-template-rows: 1fr 1fr 1fr;
+          gap: 1rem;
+          margin: 0 1rem 0 2rem;
+
+          h2 {
+            color: $gray;
+            font-size: 2rem;
+            font-weight: 800;
+          }
+
+          h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+          }
+
+          p {
+            line-height: 1.8rem;
+            color: $dark-blue;
+          }
+        }
+      }
+    }
+  }
+}
